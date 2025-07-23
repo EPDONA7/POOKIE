@@ -1,0 +1,104 @@
+body {
+    background-image: url('https://i.pinimg.com/736x/0b/b6/41/0bb641a5657ae98d1df7281b693eff92.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Minecraft', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    border: 3px solid #555;
+    background-color: #777;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yes-btn {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #4CAF50; /* Green */
+}
+
+#no-btn {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f44336; /* Red */
+}
+
+.hidden {
+    display: none !important;
+}
+
+#animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#animation-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: hug-animation 1.5s ease-in-out forwards;
+}
+
+@keyframes hug-animation {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) translateX(var(--x-start));
+    }
+    100% {
+        transform: translateY(110vh) translateX(var(--x-end));
+    }
+}
